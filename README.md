@@ -6,7 +6,7 @@ senza WordPress e senza plugin. Basta caricare i file su qualsiasi hosting (anch
 ```
 index.html            la pagina
 assets/css/style.css  stile (tema chiaro e scuro automatico)
-assets/js/main.js     menu mobile e la "bilancia" del banco
+assets/js/main.js     menu mobile, "aperto ora" in tempo reale, animazioni
 assets/img/           foto e logo (dal sito originale, ottimizzati in WebP)
 ```
 
@@ -16,7 +16,6 @@ Per vederlo in locale: `python3 -m http.server` nella cartella e apri http://loc
 
 - **Orari**: il sito vecchio riportava sia "Lun–Dom 07:00–22:00" sia altri orari del template.
   Qui c'è 07:00–22:00 tutti i giorni.
-- **Piatti del banco** (sezione "Componi il tuo assaggio"): sono esempi di specialità pugliesi
-  con pesi indicativi. Cambiali in `index.html` con i piatti veri (attributi `data-name` e `data-g`).
-- **Cantina**: i vitigni citati (Primitivo, Negroamaro, Nero di Troia) sono esempi.
+- **Specialità nella striscia scorrevole** e fasce orarie della sezione "La giornata"
+  (mattina, pranzo, aperitivo, cena): sono indicative, correggile in `index.html`.
 - **Privacy policy**: il link punta ancora alla pagina del vecchio sito.

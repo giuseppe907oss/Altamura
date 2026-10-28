@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>La Cucina di Altamura</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="La Cucina di Altamura a Varese: un grande banco di specialità pugliesi, scegli tu cosa e quanto mangiare, anche in micro porzioni, e paghi a peso. Aperti tutti i giorni dalle 7 alle 22.">
+<meta name="description" content="La Cucina di Altamura a Varese: un grande banco di specialità pugliesi. Scegli tu cosa e quanto mangiare, anche in micro porzioni, e paghi a peso. Aperti tutti i giorni dalle 7 alle 22.">
 <meta property="og:title" content="La Cucina di Altamura · All Day Puglia Experience">
-<meta property="og:description" content="Un grande banco di specialità pugliesi in centro a Varese. Scegli cosa e quanto mangiare, paghi a peso.">
+<meta property="og:description" content="Un grande banco di specialità pugliesi a Varese. Scegli cosa e quanto mangiare, paghi a peso.">
 <meta property="og:image" content="assets/img/tagliere.webp">
 <meta property="og:type" content="restaurant">
-<meta name="theme-color" content="#1d3765">
+<meta name="theme-color" content="#15120e">
 <link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -27,6 +27,7 @@
   "servesCuisine": ["Pugliese", "Italiana"],
   "telephone": "+39 334 127 8236",
   "email": "info@lacucinadialtamura.it",
+  "acceptsReservations": true,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Via Pietro Giannone, 1",
@@ -52,252 +53,308 @@
 
 <a class="skip" href="#contenuto">Vai al contenuto</a>
 
-<header class="site-header" id="top">
-  <div class="wrap header-inner">
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
     <a class="brand" href="#top" aria-label="La Cucina di Altamura, torna all'inizio">
-      <img class="brand-logo" src="assets/img/logo.png" width="199" height="194" alt="">
-      <span class="brand-text">La Cucina<br>di Altamura</span>
+      <img class="brand-logo" src="assets/img/logo-white.png" width="199" height="194" alt="">
+      <span class="brand-name">La Cucina<br>di Altamura</span>
     </a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav">
-      <span class="nav-toggle-bars" aria-hidden="true"></span>
-      <span class="nav-toggle-label">Menu</span>
-    </button>
     <nav class="nav" id="nav" aria-label="Sezioni">
       <a href="#come-funziona">Come funziona</a>
-      <a href="#banco">Il banco</a>
+      <a href="#domande">Domande</a>
       <a href="#giornata">La giornata</a>
-      <a href="#dove">Dove siamo</a>
-      <a class="btn btn-small btn-accent" href="https://wa.link/ildauq" target="_blank" rel="noopener">Prenota un tavolo</a>
+      <a href="#visita">Orari e indirizzo</a>
     </nav>
+    <div class="hdr-cta">
+      <span class="status status-sm" data-status><span class="dot"></span><span data-status-text>Aperti tutti i giorni</span></span>
+      <a class="btn btn-grano btn-sm" href="https://wa.link/ildauq" target="_blank" rel="noopener">Prenota</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Apri il menu"><span></span></button>
+    </div>
   </div>
 </header>
 
+<div class="drawer" id="drawer" hidden>
+  <nav class="drawer-nav" aria-label="Menu">
+    <a href="#come-funziona"><small>01</small>Come funziona</a>
+    <a href="#giornata"><small>02</small>La giornata</a>
+    <a href="#domande"><small>03</small>Domande</a>
+    <a href="#visita"><small>04</small>Orari e indirizzo</a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn btn-grano" href="https://wa.link/ildauq" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+    <p>Via Pietro Giannone 1, Varese<br><a href="tel:+393341278236">334 127 8236</a></p>
+  </div>
+</div>
+
 <main id="contenuto">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Varese · Via Pietro Giannone 1</p>
-        <h1 class="display">Scegli tu<br><span class="hl">cosa</span> e <span class="hl">quanto</span><br>mangiare.</h1>
-        <p class="lead">Un grande banco di specialità pugliesi, diverso ogni giorno. Prendi quello che ti va, anche in micro porzioni, e paghi a peso. Poi ti siedi e ti serviamo al tavolo, oppure porti tutto a casa.</p>
-        <div class="hero-actions">
-          <a class="btn btn-accent" href="https://wa.link/ildauq" target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z" fill="currentColor"/></svg>
-            Prenota su WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="#banco">Guarda il banco</a>
-        </div>
-        <ul class="hero-facts" aria-label="In breve">
-          <li><strong>07–22</strong><span>aperti tutti i giorni</span></li>
-          <li><strong>a peso</strong><span>paghi solo quello che prendi</span></li>
-          <li><strong>100%</strong><span>birre e vini pugliesi</span></li>
-        </ul>
-      </div>
-      <figure class="hero-photo">
-        <img src="assets/img/tagliere.webp" width="1160" height="720" alt="Tagliere di micro porzioni pugliesi: polpette al sugo, focaccia, stracciatella, verdure, riso, farro, panzerotto e crudo" fetchpriority="high">
-        <figcaption class="scale-chip" aria-hidden="true">
-          <span class="scale-chip-label">Il tuo assaggio</span>
-          <span class="scale-chip-value">0,420 kg</span>
-        </figcaption>
-      </figure>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/img/tagliere.webp" width="1160" height="720" alt="" fetchpriority="high">
+  </div>
+  <div class="wrap hero-in">
+    <p class="hero-kicker reveal-now">All Day Puglia Experience · Varese</p>
+    <h1 class="hero-title" aria-label="Scegli tu cosa e quanto mangiare.">
+      <span class="line"><span>Scegli tu</span></span>
+      <span class="line"><span><em>cosa</em> e <em>quanto</em></span></span>
+      <span class="line"><span>mangiare.</span></span>
+    </h1>
+    <p class="hero-lead reveal-now">Un grande banco di specialità pugliesi, diverso ogni giorno. Prendi quello che ti va, anche in micro porzioni, e paghi a peso.</p>
+    <div class="hero-actions reveal-now">
+      <a class="btn btn-grano" href="https://wa.link/ildauq" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Prenota un tavolo
+      </a>
+      <a class="btn btn-glass" href="#come-funziona">Come funziona</a>
     </div>
-  </section>
+  </div>
 
-  <!-- COME FUNZIONA -->
-  <section class="section how" id="come-funziona">
-    <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow">Come funziona</p>
-        <h2 class="title">Non c'è un menù da leggere.</h2>
-        <p class="section-lead">L'appetito te lo apre la vista del banco. I piatti cambiano ogni giorno, in base agli ingredienti che si trovano e all'estro dello Chef Maurizio.</p>
-      </header>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-n" aria-hidden="true">1</span>
-          <h3>Libertà</h3>
-          <p>Ti avvicini al banco e scegli tu, piatto per piatto. Nessun menù fisso, nessuna portata obbligatoria.</p>
-        </li>
-        <li class="step">
-          <span class="step-n" aria-hidden="true">2</span>
-          <h3>Micro porzioni</h3>
-          <p>Un cucchiaio di tutto o un piatto pieno di una cosa sola. Paghi a peso, quindi la porzione la decidi tu.</p>
-        </li>
-        <li class="step">
-          <span class="step-n" aria-hidden="true">3</span>
-          <h3>Varietà</h3>
-          <p>Ti accomodi e ti serviamo al tavolo. Se preferisci, ti prepariamo tutto da portare a casa.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- BANCO INTERATTIVO -->
-  <section class="section banco" id="banco">
-    <div class="wrap banco-grid">
-      <div class="banco-intro">
-        <p class="eyebrow eyebrow-light">Il banco</p>
-        <h2 class="title title-light">Componi il tuo assaggio</h2>
-        <p class="lead-light">Tocca le specialità per aggiungerle al piatto e guarda la bilancia. Funziona proprio così anche da noi.</p>
-        <p class="note">Esempi di cosa può trovarsi al banco. La proposta cambia ogni giorno e il prezzo lo vedi in cassa.</p>
+  <div class="hero-bar reveal-now">
+    <div class="wrap hero-bar-in">
+      <div class="hb-item">
+        <span class="status" data-status><span class="dot"></span><span data-status-text>Aperti tutti i giorni</span></span>
+        <span class="hb-sub" data-status-sub>07:00 – 22:00</span>
       </div>
-
-      <div class="banco-app">
-        <ul class="dishes" id="dishes" aria-label="Specialità del banco">
-          <li><button type="button" class="dish" data-name="Orecchiette alle cime di rapa" data-g="80">Orecchiette alle cime di rapa<span>80 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Parmigiana di melanzane" data-g="90">Parmigiana di melanzane<span>90 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Polpette al sugo" data-g="60">Polpette al sugo<span>60 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Focaccia barese" data-g="70">Focaccia barese<span>70 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Stracciatella" data-g="50">Stracciatella<span>50 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Panzerotto fritto" data-g="90">Panzerotto fritto<span>90 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Bombette" data-g="60">Bombette<span>60 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Riso, patate e cozze" data-g="80">Riso, patate e cozze<span>80 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Capocollo di Martina Franca" data-g="30">Capocollo di Martina Franca<span>30 g</span></button></li>
-          <li><button type="button" class="dish" data-name="Fave e cicoria" data-g="70">Fave e cicoria<span>70 g</span></button></li>
-        </ul>
-
-        <div class="scale" aria-live="polite">
-          <div class="scale-display">
-            <span class="scale-label">Peso netto</span>
-            <output class="scale-value" id="scale-value" for="dishes">0,000</output>
-            <span class="scale-unit">kg</span>
-          </div>
-          <ul class="plate" id="plate">
-            <li class="plate-empty">Il piatto è vuoto. Scegli qualcosa dal banco.</li>
-          </ul>
-          <div class="scale-actions">
-            <button type="button" class="btn btn-small btn-line" id="scale-reset">Svuota il piatto</button>
-            <a class="btn btn-small btn-accent" href="https://wa.link/ildauq" target="_blank" rel="noopener">Vieni ad assaggiarlo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LA GIORNATA -->
-  <section class="section day" id="giornata">
-    <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow">All Day Puglia Experience</p>
-        <h2 class="title">Dalla colazione alla cena, sempre Puglia.</h2>
-      </header>
-
-      <ol class="timeline">
-        <li class="moment">
-          <figure class="moment-photo"><img src="assets/img/caffe.webp" width="972" height="648" alt="Caffè espresso versato in una tazzina La Cucina di Altamura" loading="lazy"></figure>
-          <div class="moment-copy">
-            <time class="moment-time">dalle 07:00</time>
-            <h3>Colazione al banco</h3>
-            <p>Si apre presto, con il caffè e i dolci del mattino. Un buon modo per cominciare la giornata a Varese con un accento del Sud.</p>
-          </div>
-        </li>
-        <li class="moment">
-          <figure class="moment-photo"><img src="assets/img/parmigiana.webp" width="1160" height="720" alt="Porzione di parmigiana di melanzane servita in un piatto bianco" loading="lazy"></figure>
-          <div class="moment-copy">
-            <time class="moment-time">pranzo e cena</time>
-            <h3>Il banco caldo</h3>
-            <p>Primi, secondi, verdure e fritti preparati ogni giorno. Scegli, ti siedi, e i piatti arrivano al tavolo. Oppure li porti a casa, ancora caldi.</p>
-          </div>
-        </li>
-        <li class="moment">
-          <figure class="moment-photo"><img src="assets/img/tagliere.webp" width="1160" height="720" alt="Aperitivo pugliese con taralli e assaggi in piccole ciotole" loading="lazy"></figure>
-          <div class="moment-copy">
-            <time class="moment-time">tardo pomeriggio</time>
-            <h3>Aperipuglia</h3>
-            <p>Un tagliere di assaggi dal banco, taralli e un calice di vino pugliese. L'aperitivo come si fa giù.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- LOCALE + CANTINA -->
-  <section class="section place">
-    <div class="wrap place-grid">
-      <figure class="place-photo">
-        <img src="assets/img/banco.webp" width="1160" height="720" alt="L'interno della Cucina di Altamura: il lungo banco in legno chiaro, i tavoli e gli scaffali con vini e prodotti pugliesi" loading="lazy">
-      </figure>
-      <div class="place-copy">
-        <p class="eyebrow">Il locale</p>
-        <h2 class="title">Un pezzo di Puglia in centro a Varese.</h2>
-        <p>Legno chiaro, luce naturale e un lungo banco di vetro dove vedi tutto quello che c'è da mangiare. Sugli scaffali trovi prodotti pugliesi da portare a casa.</p>
-        <div class="cantina">
-          <h3>La cantina</h3>
-          <p>Birre e vini solo pugliesi. Primitivo, Negroamaro, Nero di Troia e le birre artigianali della regione, da bere al tavolo o da comprare.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RECENSIONI -->
-  <section class="section review">
-    <div class="wrap review-inner">
-      <div>
-        <h2 class="title title-light">Sei stato da noi?</h2>
-        <p class="lead-light">Raccontaci com'è andata. Ogni recensione ci aiuta a migliorare e fa scoprire il banco a qualcun altro.</p>
-      </div>
-      <div class="review-actions">
-        <a class="btn btn-light" href="https://www.google.com/search?q=La+Cucina+di+Altamura+Varese" target="_blank" rel="noopener">Recensisci su Google</a>
-        <a class="btn btn-line-light" href="https://www.facebook.com/pg/lacucinadialtamura/reviews/" target="_blank" rel="noopener">Recensisci su Facebook</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOVE SIAMO -->
-  <section class="section where" id="dove">
-    <div class="wrap where-grid">
-      <div class="where-copy">
-        <p class="eyebrow">Dove siamo</p>
-        <h2 class="title">Ti aspettiamo al banco.</h2>
-        <dl class="info">
-          <div>
-            <dt>Indirizzo</dt>
-            <dd>Via Pietro Giannone, 1<br>21100 Varese (VA)</dd>
-          </div>
-          <div>
-            <dt>Orari</dt>
-            <dd>Aperti tutti i giorni<br><span class="mono">07:00 – 22:00</span></dd>
-          </div>
-          <div>
-            <dt>Telefono e WhatsApp</dt>
-            <dd><a href="tel:+393341278236" class="mono">334 127 8236</a></dd>
-          </div>
-          <div>
-            <dt>Email</dt>
-            <dd><a href="mailto:info@lacucinadialtamura.it">info@lacucinadialtamura.it</a></dd>
-          </div>
-        </dl>
-        <div class="where-actions">
-          <a class="btn btn-accent" href="https://wa.link/ildauq" target="_blank" rel="noopener">Prenota un tavolo</a>
-          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=La+Cucina+di+Altamura+Via+Pietro+Giannone+1+Varese" target="_blank" rel="noopener">Apri in Google Maps</a>
-        </div>
-      </div>
-      <a class="map-card" href="https://www.google.com/maps/search/?api=1&amp;query=La+Cucina+di+Altamura+Via+Pietro+Giannone+1+Varese" target="_blank" rel="noopener" aria-label="Apri la posizione in Google Maps">
-        <span class="map-pin" aria-hidden="true"></span>
-        <span class="map-label">Via Pietro Giannone, 1<small>Varese centro</small></span>
+      <a class="hb-item hb-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Pietro+Giannone+1+21100+Varese" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+        <span><strong>Via Pietro Giannone, 1</strong><span class="hb-sub">Varese · Indicazioni</span></span>
+      </a>
+      <a class="hb-item hb-link" href="tel:+393341278236">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span><strong>334 127 8236</strong><span class="hb-sub">Chiama o scrivi su WhatsApp</span></span>
       </a>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Orecchiette</span><i>✶</i><span>Panzerotti</span><i>✶</i><span>Focaccia barese</span><i>✶</i><span>Bombette</span><i>✶</i><span>Parmigiana</span><i>✶</i><span>Stracciatella</span><i>✶</i><span>Taralli</span><i>✶</i><span>Polpette al sugo</span><i>✶</i><span>Capocollo</span><i>✶</i><span>Primitivo</span><i>✶</i>
+    <span>Orecchiette</span><i>✶</i><span>Panzerotti</span><i>✶</i><span>Focaccia barese</span><i>✶</i><span>Bombette</span><i>✶</i><span>Parmigiana</span><i>✶</i><span>Stracciatella</span><i>✶</i><span>Taralli</span><i>✶</i><span>Polpette al sugo</span><i>✶</i><span>Capocollo</span><i>✶</i><span>Primitivo</span><i>✶</i>
+  </div>
+</div>
+
+<!-- ============ COME FUNZIONA ============ -->
+<section class="how" id="come-funziona">
+  <div class="wrap how-grid">
+    <div class="how-media">
+      <figure class="how-photo">
+        <img src="assets/img/banco.webp" width="1160" height="720" alt="Il lungo banco in vetro della Cucina di Altamura, con tavoli in legno chiaro e scaffali di vini pugliesi" loading="lazy">
+      </figure>
+      <p class="how-stamp"><span>Niente menù.</span> Solo il banco.</p>
+    </div>
+    <div class="how-copy">
+      <p class="kicker reveal">Come funziona</p>
+      <h2 class="h2 reveal">Non c'è un menù da leggere. <em>Lo hai davanti.</em></h2>
+      <p class="lead reveal">L'appetito te lo apre la vista del banco. I piatti cambiano ogni giorno, in base agli ingredienti che si trovano e all'estro dello Chef Maurizio.</p>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">1</span>
+          <div><h3>Scegli al banco</h3><p>Guardi, assaggi con gli occhi e indichi quello che vuoi. Libertà totale, nessuna portata obbligatoria.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">2</span>
+          <div><h3>Paghi a peso</h3><p>Un cucchiaio di tutto o un piatto pieno di una cosa sola. Con le micro porzioni la quantità la decidi tu.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">3</span>
+          <div><h3>Al tavolo o a casa</h3><p>Ti accomodi e ti serviamo al tavolo. Oppure ti prepariamo tutto da portare via.</p></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA GIORNATA ============ -->
+<section class="day" id="giornata">
+  <div class="wrap">
+    <div class="day-head">
+      <div>
+        <p class="kicker kicker-grano reveal">All Day Puglia Experience</p>
+        <h2 class="h2 h2-light reveal">Dalle 7 alle 22. <em>Sempre Puglia.</em></h2>
+      </div>
+      <p class="lead lead-light reveal">Il banco non chiude mai durante il giorno: passa quando vuoi, per un caffè o per una cena.</p>
+    </div>
+  </div>
+  <div class="day-rail reveal" id="day-rail">
+    <article class="moment" data-from="7" data-to="11">
+      <figure><img src="assets/img/caffe.webp" width="972" height="648" alt="Espresso versato in una tazzina della Cucina di Altamura" loading="lazy"></figure>
+      <div class="moment-body">
+        <span class="moment-when">Mattina · dalle 07:00</span>
+        <h3>Colazione al banco</h3>
+        <p>Caffè e dolci del mattino, per cominciare la giornata con un accento del Sud.</p>
+      </div>
+      <span class="now-badge">Adesso</span>
+    </article>
+    <article class="moment" data-from="11" data-to="15">
+      <figure><img src="assets/img/parmigiana.webp" width="1160" height="720" alt="Porzione di parmigiana di melanzane in un piatto bianco" loading="lazy"></figure>
+      <div class="moment-body">
+        <span class="moment-when">Pranzo</span>
+        <h3>Il banco caldo</h3>
+        <p>Primi, secondi, verdure e fritti preparati ogni giorno. Veloce in pausa pranzo, o con calma.</p>
+      </div>
+      <span class="now-badge">Adesso</span>
+    </article>
+    <article class="moment" data-from="15" data-to="19">
+      <figure><img src="assets/img/tagliere.webp" width="1160" height="720" alt="Tagliere di assaggi pugliesi con taralli" loading="lazy"></figure>
+      <div class="moment-body">
+        <span class="moment-when">Pomeriggio e aperitivo</span>
+        <h3>Aperipuglia</h3>
+        <p>Un tagliere di assaggi dal banco, taralli e un calice di vino pugliese.</p>
+      </div>
+      <span class="now-badge">Adesso</span>
+    </article>
+    <article class="moment" data-from="19" data-to="22">
+      <figure><img src="assets/img/banco.webp" width="1160" height="720" alt="La sala della Cucina di Altamura con i tavoli apparecchiati" loading="lazy"></figure>
+      <div class="moment-body">
+        <span class="moment-when">Sera · fino alle 22:00</span>
+        <h3>Cena</h3>
+        <p>Ti siedi, ti serviamo al tavolo. Oppure porti a casa la cena già pronta.</p>
+      </div>
+      <span class="now-badge">Adesso</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="domande">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="kicker reveal">Prima di venire</p>
+      <h2 class="h2 reveal">Le domande <em>di chi viene la prima volta.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="qa reveal" open>
+        <summary>Come si paga?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>A peso. Scegli al banco quello che vuoi, nelle quantità che vuoi, e paghi in base a quanto pesa il piatto.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>C'è un menù fisso?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>No. I piatti al banco cambiano ogni giorno, in base agli ingredienti disponibili e alle idee dello Chef Maurizio.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Posso portare via?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>Sì, tutto quello che c'è al banco si può portare a casa.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>C'è il servizio al tavolo?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>Sì. Scegli al banco, ti accomodi e i piatti te li portiamo noi.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Come prenoto un tavolo?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>Scrivici su <a href="https://wa.link/ildauq" target="_blank" rel="noopener">WhatsApp</a> o chiama il <a href="tel:+393341278236">334 127 8236</a>.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Quando siete aperti?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="qa-a"><p>Tutti i giorni, dalle 07:00 alle 22:00.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARALLAX / CANTINA ============ -->
+<section class="cantina" aria-labelledby="cantina-t">
+  <div class="cantina-media" aria-hidden="true">
+    <img src="assets/img/banco.webp" width="1160" height="720" alt="" loading="lazy" data-parallax>
+  </div>
+  <div class="wrap cantina-in">
+    <p class="kicker kicker-grano reveal">La cantina</p>
+    <h2 class="cantina-t reveal" id="cantina-t">Birre e vini <em>solo</em> pugliesi.</h2>
+    <div class="cantina-cols">
+      <p class="reveal">Al tavolo c'è solo Puglia, anche nel bicchiere. Chiedici cosa abbinare a quello che hai preso al banco.</p>
+      <p class="reveal">E se ti è piaciuto, sugli scaffali trovi prodotti pugliesi da portare a casa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISITA ============ -->
+<section class="visit" id="visita">
+  <div class="wrap visit-grid">
+    <div class="visit-info">
+      <p class="kicker reveal">Vieni a trovarci</p>
+      <h2 class="h2 reveal">Ti aspettiamo <em>al banco.</em></h2>
+
+      <div class="visit-status reveal">
+        <span class="status status-lg" data-status><span class="dot"></span><span data-status-text>Aperti tutti i giorni</span></span>
+      </div>
+
+      <ul class="hours reveal" id="hours" aria-label="Orari di apertura">
+        <li data-day="1"><span>Lunedì</span><span>07:00 – 22:00</span></li>
+        <li data-day="2"><span>Martedì</span><span>07:00 – 22:00</span></li>
+        <li data-day="3"><span>Mercoledì</span><span>07:00 – 22:00</span></li>
+        <li data-day="4"><span>Giovedì</span><span>07:00 – 22:00</span></li>
+        <li data-day="5"><span>Venerdì</span><span>07:00 – 22:00</span></li>
+        <li data-day="6"><span>Sabato</span><span>07:00 – 22:00</span></li>
+        <li data-day="0"><span>Domenica</span><span>07:00 – 22:00</span></li>
+      </ul>
+
+      <dl class="contacts reveal">
+        <div><dt>Indirizzo</dt><dd>Via Pietro Giannone, 1<br>21100 Varese (VA)</dd></div>
+        <div><dt>Telefono e WhatsApp</dt><dd><a href="tel:+393341278236">334 127 8236</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:info@lacucinadialtamura.it">info@lacucinadialtamura.it</a></dd></div>
+      </dl>
+
+      <div class="visit-actions reveal">
+        <a class="btn btn-pomodoro" href="https://wa.link/ildauq" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Pietro+Giannone+1+21100+Varese" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Indicazioni</a>
+      </div>
+    </div>
+
+    <div class="visit-map reveal">
+      <iframe title="Mappa: La Cucina di Altamura, Via Pietro Giannone 1, Varese" src="https://www.google.com/maps?q=Via+Pietro+Giannone+1,+21100+Varese&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENSIONI ============ -->
+<section class="review">
+  <div class="wrap review-in">
+    <h2 class="review-t reveal">Sei già stato da noi? <em>Raccontalo.</em></h2>
+    <div class="review-actions reveal">
+      <a class="btn btn-grano" href="https://www.google.com/search?q=La+Cucina+di+Altamura+Varese" target="_blank" rel="noopener">Recensione su Google</a>
+      <a class="btn btn-line" href="https://www.facebook.com/pg/lacucinadialtamura/reviews/" target="_blank" rel="noopener">Recensione su Facebook</a>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo-white.png" width="199" height="194" alt="La Cucina di Altamura · All Day Puglia Experience">
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <p class="ftr-big" aria-hidden="true">All Day <em>Puglia</em> Experience</p>
+    <div class="ftr-row">
+      <img class="ftr-logo" src="assets/img/logo-white.png" width="199" height="194" alt="La Cucina di Altamura">
+      <div class="ftr-col">
+        <span>Via Pietro Giannone, 1 · 21100 Varese</span>
+        <span>Tutti i giorni 07:00 – 22:00</span>
+        <a href="tel:+393341278236">334 127 8236</a>
+      </div>
+      <nav class="ftr-col" aria-label="Social">
+        <a href="https://www.instagram.com/lacucinadialtamura" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://www.facebook.com/lacucinadialtamura/" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="https://lacucinadialtamura.it/privacy-policy/">Privacy policy</a>
+      </nav>
     </div>
-    <nav class="footer-links" aria-label="Social e informazioni">
-      <a href="https://www.instagram.com/lacucinadialtamura" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/lacucinadialtamura/" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://lacucinadialtamura.it/privacy-policy/">Privacy policy</a>
-    </nav>
     <p class="legal">© <span id="year">2026</span> LCDA Varese srl · P.IVA 03406030126</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.link/ildauq" target="_blank" rel="noopener" aria-label="Prenota su WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z" fill="currentColor"/></svg>
-</a>
+<!-- ============ BARRA AZIONI (telefono) ============ -->
+<nav class="actionbar" aria-label="Azioni rapide">
+  <a href="tel:+393341278236"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+  <a class="ab-main" href="https://wa.link/ildauq" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Prenota</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Pietro+Giannone+1+21100+Varese" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Indicazioni</a>
+</nav>
+
+<!-- icone -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 5.1 5.1l1.4-2.3L19 13.5V17a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+</svg>
 
 <script src="assets/js/main.js"></script>
 </body>
